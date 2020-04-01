@@ -1,0 +1,14 @@
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\bin\Debug\netstandard2.0\Module3-Demo.deps.json
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\bin\Debug\netstandard2.0\Module3-Demo.dll
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\bin\Debug\netstandard2.0\ref\Module3-Demo.dll
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\bin\Debug\netstandard2.0\Module3-Demo.pdb
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\Module3-Demo.csprojAssemblyReference.cache
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\Module3-Demo.csproj.CoreCompileInputs.cache
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\Module3-Demo.AssemblyInfoInputs.cache
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\Module3-Demo.AssemblyInfo.cs
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\Module3-Demo.dll
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\ref\Module3-Demo.dll
+C:\Users\j.onillon\source\repos\Module3-Demo\Module3-Demo\Module3-Demo\obj\Debug\netstandard2.0\Module3-Demo.pdb
