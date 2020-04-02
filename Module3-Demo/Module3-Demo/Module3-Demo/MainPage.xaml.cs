@@ -25,7 +25,7 @@ namespace Module3_Demo
             this.tweets.IsVisible = true;
             this.twitterService = new TwitterServiceImpl();
         }
-        private void Connection_Clicked(object sender, EventArgs e) { 
+        private async void Connection_Clicked(object sender, EventArgs e) { 
             Console.WriteLine("Connection is clicked");
             String login = this.identifier.Text;
             String password = this.password.Text;
@@ -53,6 +53,8 @@ namespace Module3_Demo
                 this.errorLabel.IsVisible = false;
                 this.form.IsVisible = false;
             }
+
+            await Navigation.PushAsync(new ListeTweets());
         }
     }
 }

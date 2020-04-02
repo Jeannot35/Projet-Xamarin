@@ -12,7 +12,7 @@
             <StackLayout Orientation="Horizontal" Margin="10, 25">
                 <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.pencil.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
                 <Label Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="White"></Label>
-                <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.search.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.search.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
             </StackLayout>
         </ContentView>
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -29,21 +29,10 @@
                 <Button Text="Se connecter" HorizontalOptions="FillAndExpand" Clicked="Connection_Clicked"></Button>
               </StackLayout>
                 <StackLayout x:Name="tweets" IsVisible="False" Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
-                        <Image Margin="10" WidthRequest="75" Aspect="AspectFit" Source="https://picsum.photos/50/50/?random"></Image>
-                        <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="Jean" TextColor="Black"></Label>
-                                <Label Text="@JeanOnillon" TextColor="Black"></Label>
-                                <Label Text="50s" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
-                            </StackLayout>
-                            <Label Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec euismod convallis dolor. Quisque ultricies porttitor nunc venenatis facilisis. " TextColor="Black"></Label>
-                        </StackLayout>
-                    </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.reply.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
-                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.retweet.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
-                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.favorite.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.reply.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.retweet.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.favorite.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
                     </StackLayout>
                     <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
                 </StackLayout>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:utils="clr-namespace:Module3_Demo.Utils"
+             x:Class="Module3_Demo.ListeTweets">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <ContentView BackgroundColor="#58B0F0">
+                <StackLayout Orientation="Horizontal" Margin="10, 25">
+                    <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.pencil.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+                    <Label Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="White"></Label>
+                    <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.search.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+                </StackLayout>
+            </ContentView>
+            <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Orientation="Vertical">
+                    <StackLayout x:Name="tweets" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                        <ListView x:Name="ListeDesTweets">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" Margin="10">
+                                            <Image Margin="10" WidthRequest="75" Aspect="AspectFit" Source="https://picsum.photos/50/50/?random"></Image>
+                                            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="Jean" TextColor="Black"></Label>
+                                                    <Label Text="@JeanOnillon" TextColor="Black"></Label>
+                                                    <Label Text="{Binding CreatedAt}" TextColor="Black" HorizontalOptions="EndAndExpand"></Label>
+                                                </StackLayout>
+                                                <Label Text="{Binding Data}" TextColor="Black"></Label>
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal">
+                                            <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.reply.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                                            <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.retweet.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                                            <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.favorite.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>
