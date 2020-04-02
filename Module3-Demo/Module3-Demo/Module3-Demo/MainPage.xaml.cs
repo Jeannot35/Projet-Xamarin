@@ -1,9 +1,12 @@
-﻿using System;
+﻿using Module3_Demo.Entities;
+using Module3_Demo.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Module3_Demo
@@ -13,29 +16,42 @@ namespace Module3_Demo
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        private ITwitterService twitterService;
+
         public MainPage()
         {
             InitializeComponent();
             this.form.IsVisible = false;
             this.tweets.IsVisible = true;
+            this.twitterService = new TwitterServiceImpl();
         }
         private void Connection_Clicked(object sender, EventArgs e) { 
             Console.WriteLine("Connection is clicked");
-            String identifierStr = this.identifier.Text;
-            String passwordStr = this.password.Text;
-            Boolean isRemember = this.remember.IsToggled;
-            this.error.IsVisible = false;
+            String login = this.identifier.Text;
+            String password = this.password.Text;
+            Boolean isRemind = this.remember.IsToggled;
 
-            if (String.IsNullOrEmpty(identifierStr) || identifierStr.Length < 3) {
-                this.error.Text = "Veuillez entrer un identifiant d'au moins 3 caractères";
-                this.error.IsVisible = true;
-                return;
+            String errors = "";
+
+            if (Connectivity.NetworkAccess == NetworkAccess.Internet)
+            { 
+                errors = this.twitterService.Authenticate(new User() { Login = login, Password = password });
+            }
+            else
+            {
+                errors = "Pas de connexion internet disponible.";
             }
 
-            if (String.IsNullOrEmpty(passwordStr) || passwordStr.Length < 6) {
-                this.error.Text = "Veuillez entrer un mot de passe d'au moins 6 caractères";
-                this.error.IsVisible = true;
-                return;
+            if (!String.IsNullOrEmpty(errors))
+            {
+                this.errorLabel.Text = errors;
+                this.errorLabel.IsVisible = true;
+            }
+            else
+            {
+                this.errorLabel.Text = "";
+                this.errorLabel.IsVisible = false;
+                this.form.IsVisible = false;
             }
         }
     }

@@ -4,14 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:utils="clr-namespace:Module3_Demo.Utils"
              x:Class="Module3_Demo.MainPage">
 
     <StackLayout Orientation="Vertical">
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal" Margin="10, 25">
-                <ImageButton Source="pencil.png" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.pencil.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
                 <Label Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="White"></Label>
-                <ImageButton Source="search.png" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.search.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
             </StackLayout>
         </ContentView>
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -23,7 +24,7 @@
                 <StackLayout Orientation="Horizontal">
                     <Switch x:Name="remember"></Switch>
                     <Label Text="Mémoriser mes informations" VerticalOptions="CenterAndExpand"></Label>
-                    <Label x:Name="error" IsVisible="False" TextColor="DarkRed"></Label>
+                    <Label x:Name="errorLabel" IsVisible="False" TextColor="DarkRed"></Label>
                 </StackLayout>
                 <Button Text="Se connecter" HorizontalOptions="FillAndExpand" Clicked="Connection_Clicked"></Button>
               </StackLayout>
@@ -40,9 +41,9 @@
                         </StackLayout>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="reply.png" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
-                        <ImageButton Source="retweet.png" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
-                        <ImageButton Source="favorite.png" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.reply.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.retweet.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.favorite.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
                     </StackLayout>
                     <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
                 </StackLayout>
