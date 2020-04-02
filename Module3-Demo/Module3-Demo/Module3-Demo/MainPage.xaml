@@ -10,31 +10,23 @@
     <StackLayout Orientation="Vertical">
         <ContentView BackgroundColor="#58B0F0">
             <StackLayout Orientation="Horizontal" Margin="10, 25">
-                <ImageButton Source="{utils:ImageFromResources Module3_Demo.Image.pencil.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
+                <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.pencil.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
                 <Label Text="Accueil" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="20" TextColor="White"></Label>
                 <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.search.png}" WidthRequest="25" BackgroundColor="Transparent"></ImageButton>
             </StackLayout>
         </ContentView>
         <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <StackLayout Orientation="Vertical">
-              <StackLayout x:Name="form" Orientation="Vertical">
-                <Label Text="Connexion à Twitter" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
-                <Entry x:Name="identifier" Placeholder="Identifiant Twitter" HorizontalOptions="FillAndExpand" MaxLength="50" Keyboard="Email" ReturnType="Next"/>
-                <Entry x:Name="password" Placeholder="Mot de passe" HorizontalOptions="FillAndExpand" MaxLength="50" Keyboard="Default" IsPassword="True" ReturnType="Next"/>
-                <StackLayout Orientation="Horizontal">
-                    <Switch x:Name="remember"></Switch>
-                    <Label Text="Mémoriser mes informations" VerticalOptions="CenterAndExpand"></Label>
-                    <Label x:Name="errorLabel" IsVisible="False" TextColor="DarkRed"></Label>
-                </StackLayout>
-                <Button Text="Se connecter" HorizontalOptions="FillAndExpand" Clicked="Connection_Clicked"></Button>
-              </StackLayout>
-                <StackLayout x:Name="tweets" IsVisible="False" Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                <StackLayout x:Name="form" Orientation="Vertical">
+                    <Label Text="Connexion à Twitter" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"></Label>
+                    <Entry x:Name="identifier" Placeholder="Identifiant Twitter" HorizontalOptions="FillAndExpand" MaxLength="50" Keyboard="Email" ReturnType="Next"/>
+                    <Entry x:Name="password" Placeholder="Mot de passe" HorizontalOptions="FillAndExpand" MaxLength="50" Keyboard="Default" IsPassword="True" ReturnType="Next"/>
                     <StackLayout Orientation="Horizontal">
-                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.reply.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
-                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.retweet.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
-                        <ImageButton Source="{utils:ImageFromResources Module3_Demo.images.favorite.png}" WidthRequest="25" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent"></ImageButton>
+                        <Switch x:Name="remember"></Switch>
+                        <Label Text="Mémoriser mes informations" VerticalOptions="CenterAndExpand"></Label>
+                        <Label x:Name="errorLabel" IsVisible="False" TextColor="DarkRed"></Label>
                     </StackLayout>
-                    <ContentView HeightRequest="0.5" BackgroundColor="WhiteSmoke" HorizontalOptions="FillAndExpand"></ContentView>
+                    <Button Text="Se connecter" HorizontalOptions="FillAndExpand" Clicked="Connection_Clicked"></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>
